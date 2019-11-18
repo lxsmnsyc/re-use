@@ -28,5 +28,5 @@
 let call = () => {
   let (_, set) = React.useReducer((state, _) => !state, false);
 
-  Constant.call(() => () => set(), () => ());
+  Constant.call(() => () => set());
 };

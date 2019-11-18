@@ -25,4 +25,18 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-[@bs.module] external call: (unit => 'a) => 'a = "./bindings/useConstant.js";
+var React = require('react');
+
+var useConstant = function (supplier) {
+  var ref = React.useRef();
+
+  if (!ref.current) {
+    ref.current = {
+      value: supplier(),
+    };
+  }
+
+  return ref.current.value;
+}
+
+module.exports = useConstant;
