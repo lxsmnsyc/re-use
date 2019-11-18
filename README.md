@@ -25,6 +25,10 @@ yarn add @lxsmnsyc/re-use
 ## Hooks
 
 - Constant
+- ConstantCallback
+- EffectOnce
+- ForceUpdate
+- IsomorphicEffect
 - Mutable
 
 ## License

@@ -1,5 +1,6 @@
 {
   "name": "@lxsmnsyc/re-use",
+  "description": "A collection of hooks for ReasonReact",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
@@ -11,7 +12,8 @@
   "keywords": [
     "BuckleScript",
     "ReasonReact",
-    "reason-react"
+    "reason-react",
+    "react-hooks"
   ],
   "author": "lxsmnsyc",
   "license": "MIT",
