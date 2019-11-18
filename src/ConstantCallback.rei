@@ -25,8 +25,4 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (): (unit => unit) => {
-  let (_, set) = React.useReducer((state, _) => !state, false);
-
-  ConstantCallback.call(() => set());
-};
+let call: ('input => 'output) => ('input => 'output);
