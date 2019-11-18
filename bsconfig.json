@@ -1,0 +1,20 @@
+{
+  "name": "@lxsmnsyc/re-use",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "package-specs": [{
+    "module": "commonjs"
+  }],
+  "suffix": ".bs.js",
+  "namespace": "re-use",
+  "bs-dependencies": [
+    "reason-react"
+  ],
+  "refmt": 3
+}
