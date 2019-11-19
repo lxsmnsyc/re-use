@@ -29,7 +29,15 @@ yarn add @lxsmnsyc/re-use
 - EffectOnce
 - ForceUpdate
 - IsomorphicEffect
+- IsomorphicEffectOnce
+- LayoutEffectOnce
+- LifeCycle
 - Mutable
+- OnMount
+- OnUnmount
+- Previous
+- RefMounted
+- UpdateEffect
 
 ## License
 
