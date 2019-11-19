@@ -31,6 +31,8 @@ type t = {
 };
 
 let call = ({ onMount, onUnmount }: t) => {
-  OnMount.call(onMount);
-  OnUnmount.call(onUnmount);
+  EffectOnce.call(() => {
+    onMount();
+    Some(onUnmount);
+  });
 };
