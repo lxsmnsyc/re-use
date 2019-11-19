@@ -9,13 +9,13 @@
   },
   "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
   "package-specs": [{
-    "module": "commonjs",
-    "in-source": true
+    "module": "commonjs"
   }],
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [
-    "reason-react"
+    "reason-react",
+    "@lxsmnsyc/re-use"
   ],
   "refmt": 3
 }
