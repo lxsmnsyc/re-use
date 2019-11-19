@@ -26,7 +26,7 @@
  * @copyright Alexis Munsayac 2019
  */
 let call = (effect: unit => unit) => {
-  EffectOnce.call(() => {
+  IsomorphicEffectOnce.call(() => {
     Some(effect);
   });
 }
