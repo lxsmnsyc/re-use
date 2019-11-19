@@ -25,9 +25,4 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (effect: unit => unit) => {
-  IsomorphicEffectOnce.call(() => {
-    effect();
-    None;
-  });
-}
+let call: (unit => option(unit => unit)) => unit;
