@@ -15,6 +15,7 @@ A clear and concise description of what you want to happen.
 
 **Describe the interface**
 A clear and concise description of what the interface looks like
-```reasonml
+
+```reason
 let call: unit => unit;
 ```
