@@ -37,7 +37,9 @@ yarn add @lxsmnsyc/re-use
 - OnUnmount
 - Previous
 - RefMounted
+- ThrottledState
 - UpdateEffect
+- WindowSize
 
 ## License
 
