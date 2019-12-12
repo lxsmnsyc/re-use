@@ -28,7 +28,7 @@
 let call = () => {
   let ref = Mutable.call(false);
 
-  IsomorphicEffectOnce.call(() => {
+  IsomorphicEffect.call0(() => {
     ref := true;
 
     Some(() => {
