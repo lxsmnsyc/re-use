@@ -28,6 +28,9 @@
 [@bs.module] external call
   : ([@bs.uncurry] (unit => option(unit => unit))) => unit
   = "./bindings/useIsomorphicEffect.js";
+[@bs.module] external call0
+  : ([@bs.uncurry] (unit => option(unit => unit)), [@bs.as {json|[]|json}] _) => unit
+  = "./bindings/useIsomorphicEffect.js";
 [@bs.module] external call1
   : ([@bs.uncurry] (unit => option(unit => unit))) => array('a) => unit
   = "./bindings/useIsomorphicEffect.js";
