@@ -30,7 +30,7 @@ let call = (effect: unit => option(unit => unit), dependency: 'a) => {
   let cleanup: ref(option(unit => unit)) = Mutable.call(None);
   let deps = Mutable.call(dependency);
 
-  React.useEffect0(() => {
+  React.useEffect(() => {
     if (initial^ || deps^ != dependency) {
       initial := false;
       cleanup := effect();
