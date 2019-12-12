@@ -26,6 +26,7 @@
  * @copyright Alexis Munsayac 2019
  */
 let call: (unit => option(unit => unit)) => unit;
+let call0: (unit => option(unit => unit)) => unit;
 let call1: (unit => option(unit => unit)) => array('a) => unit;
 let call2: ((unit => option(unit => unit)), ('a, 'b)) => unit;
 let call3: ((unit => option(unit => unit)), ('a, 'b, 'c)) => unit;
