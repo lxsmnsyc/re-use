@@ -46,7 +46,7 @@ let call = () => {
     setState(_ => visibilityState == "visibile");
   })
 
-  IsomorphicEffectOnce.call(() => {
+  IsomorphicEffect.call0(() => {
     addEventListener(document, "visibilitychange", callback);
 
     Some(() => {

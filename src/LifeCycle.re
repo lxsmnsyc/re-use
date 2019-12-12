@@ -31,7 +31,7 @@ type t = {
 };
 
 let call = ({ onMount, onUnmount }: t) => {
-  IsomorphicEffectOnce.call(() => {
+  IsomorphicEffect.call0(() => {
     onMount();
     Some(onUnmount);
   });
