@@ -30,7 +30,7 @@ let call = (effect: unit => option(unit => unit), dependency: 'a) => {
   let cleanup: ref(option(unit => unit)) = Mutable.call(None);
   let deps = Mutable.call(dependency);
 
-  React.useEffect(() => {
+  IsomorphicEffect.call(() => {
     if (initial^ || deps^ != dependency) {
       initial := false;
 
@@ -39,7 +39,6 @@ let call = (effect: unit => option(unit => unit), dependency: 'a) => {
         | None => ();
       }
       cleanup := effect();
-
       deps := dependency;
     }
     None;
