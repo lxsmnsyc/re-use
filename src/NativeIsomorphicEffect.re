@@ -33,6 +33,11 @@ let call = (effect: unit => option(unit => unit), dependency: 'a) => {
   IsomorphicEffect.call(() => {
     if (initial^ || deps^ != dependency) {
       initial := false;
+
+      switch (cleanup^) {
+        | Some(fn) => fn();
+        | None => ();
+      }
       cleanup := effect();
       deps := dependency;
     }

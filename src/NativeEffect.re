@@ -33,7 +33,13 @@ let call = (effect: unit => option(unit => unit), dependency: 'a) => {
   React.useEffect(() => {
     if (initial^ || deps^ != dependency) {
       initial := false;
+
+      switch (cleanup^) {
+        | Some(fn) => fn();
+        | None => ();
+      }
       cleanup := effect();
+
       deps := dependency;
     }
     None;
