@@ -26,11 +26,8 @@ yarn add @lxsmnsyc/re-use
 
 - Constant
 - ConstantCallback
-- EffectOnce
 - ForceUpdate
 - IsomorphicEffect
-- IsomorphicEffectOnce
-- LayoutEffectOnce
 - LifeCycle
 - Mutable
 - OnMount
