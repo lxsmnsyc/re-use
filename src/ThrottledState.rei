@@ -25,4 +25,4 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call: int => 'a => ('a, ('a => 'a) => unit);
+let call: int => (unit => 'a) => ('a, ('a => 'a) => unit);
