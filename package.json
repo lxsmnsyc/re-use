@@ -3,6 +3,7 @@
   "description": "A collection of hooks for ReasonReact",
   "version": "0.4.0",
   "scripts": {
+    "prepare": "install-peers",
     "build": "bsb -make-world",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
@@ -19,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^7.0.1",
+    "install-peers-cli": "^2.1.1",
     "moduleserve": "^0.8.4"
   },
   "repository": {
@@ -29,9 +31,9 @@
     "url": "https://github.com/LXSMNSYC/re-use/issues"
   },
   "homepage": "https://github.com/LXSMNSYC/re-use",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "reason-react": "^0.7.0"
+    "reason-react": ">=0.7.0"
   }
 }
