@@ -4,7 +4,7 @@ var Curry = require("bs-platform/lib/js/curry.js");
 var Caml_obj = require("bs-platform/lib/js/caml_obj.js");
 var React = require("react");
 
-function call(callback, dependency) {
+function useNativeMemo(callback, dependency) {
   var result = React.useRef();
   var initial = React.useRef(true);
   var deps = React.useRef(dependency);
@@ -16,4 +16,5 @@ function call(callback, dependency) {
   return result.current;
 }
 
-exports.call = call;
+
+module.exports = useNativeMemo;
