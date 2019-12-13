@@ -16,13 +16,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@lxsmnsyc/re-use": "link:..",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "reason-react": ">=0.7.0",
-    "@lxsmnsyc/re-use": "link:.."
+    "reason-react": ">=0.7.0"
   },
   "devDependencies": {
-    "bs-platform": "^5.2.1",
-    "moduleserve": "^0.8.4"
+    "bs-platform": "^7.0.1",
+    "moduleserve": "^0.9.0"
   }
 }
