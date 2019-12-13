@@ -17,11 +17,6 @@
   ],
   "author": "lxsmnsyc",
   "license": "MIT",
-  "peerDependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.0"
-  },
   "devDependencies": {
     "bs-platform": "^7.0.1",
     "moduleserve": "^0.8.4"
@@ -33,5 +28,10 @@
   "bugs": {
     "url": "https://github.com/LXSMNSYC/re-use/issues"
   },
-  "homepage": "https://github.com/LXSMNSYC/re-use"
+  "homepage": "https://github.com/LXSMNSYC/re-use",
+  "dependencies": {
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "reason-react": "^0.7.0"
+  }
 }
