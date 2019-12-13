@@ -2,7 +2,7 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var Constant$ReUse = require("@lxsmnsyc/re-use/lib/js/src/Constant.bs.js");
+var Constant$ReUse = require("@lxsmnsyc/re-use/src/Constant.bs.js");
 var RandomJs = require("./bindings/random.js");
 
 function random(prim) {

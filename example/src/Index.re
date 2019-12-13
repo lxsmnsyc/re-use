@@ -16,8 +16,8 @@ module App {
 
     switch (url.hash) {
       | "/constant" => <Constant.Demo />
-      // | "/constant-callback" => <ConstantCallback.Demo />
-      // | "/native-state" => <NativeState.Demo />
+      | "/constant-callback" => <ConstantCallback.Demo />
+      | "/native-state" => <NativeState.Demo />
       | "/" => <Nav />
       | _ => <Nav />
     }

@@ -5,7 +5,7 @@ var React = require("react");
 var Caml_obj = require("bs-platform/lib/js/caml_obj.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 var RandomJs = require("./bindings/random.js");
-var ConstantCallback$ReUse = require("@lxsmnsyc/re-use/lib/js/src/ConstantCallback.bs.js");
+var ConstantCallback$ReUse = require("@lxsmnsyc/re-use/src/ConstantCallback.bs.js");
 
 function random(prim) {
   return RandomJs();

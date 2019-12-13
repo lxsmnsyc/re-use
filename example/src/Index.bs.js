@@ -1,9 +1,11 @@
 'use strict';
 
 var React = require("react");
-var ReactDOMRe = require("reason-react/lib/js/src/ReactDOMRe.js");
-var ReasonReactRouter = require("reason-react/lib/js/src/ReasonReactRouter.js");
+var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
+var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.js");
 var Constant$ReasonReactExamples = require("./Constant.bs.js");
+var NativeState$ReasonReactExamples = require("./NativeState.bs.js");
+var ConstantCallback$ReasonReactExamples = require("./ConstantCallback.bs.js");
 
 function Index$Nav(Props) {
   return React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
@@ -27,6 +29,10 @@ function Index$App(Props) {
         return React.createElement(Index$Nav, { });
     case "/constant" :
         return React.createElement(Constant$ReasonReactExamples.Demo.make, { });
+    case "/constant-callback" :
+        return React.createElement(ConstantCallback$ReasonReactExamples.Demo.make, { });
+    case "/native-state" :
+        return React.createElement(NativeState$ReasonReactExamples.Demo.make, { });
     default:
       return React.createElement(Index$Nav, { });
   }

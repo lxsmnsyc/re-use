@@ -2,7 +2,7 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var NativeState$ReUse = require("@lxsmnsyc/re-use/lib/js/src/NativeState.bs.js");
+var NativeState$ReUse = require("@lxsmnsyc/re-use/src/NativeState.bs.js");
 
 function NativeState$Demo(Props) {
   var match = NativeState$ReUse.call((function (param) {
