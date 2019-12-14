@@ -41,6 +41,7 @@ yarn add @lxsmnsyc/re-use
 - OnUnmount
 - PageVisibility
 - Previous
+- Promise
 - RefMounted
 - SyncEffect
 - ThrottledReducer
