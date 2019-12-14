@@ -1,7 +1,7 @@
 {
   "name": "@lxsmnsyc/re-use",
   "description": "A collection of hooks for ReasonReact",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "scripts": {
     "prepare": "install-peers",
     "build": "bsb -make-world",
