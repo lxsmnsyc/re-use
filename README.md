@@ -29,6 +29,7 @@ yarn add @lxsmnsyc/re-use
 - ForceUpdate
 - IsomorphicEffect
 - LifeCycle
+- MountedState
 - Mutable
 - NativeCallback
 - NativeEffect
