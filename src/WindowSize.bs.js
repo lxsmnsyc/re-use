@@ -32,7 +32,7 @@ function call(initialWidth, initialHeight) {
                             return window.innerHeight;
                           }));
             };
-            window.addEventListener("resive", handler);
+            window.addEventListener("resize", handler);
             return (function (param) {
                       window.removeEventListener("resize", handler);
                       return /* () */0;
