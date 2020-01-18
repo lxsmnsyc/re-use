@@ -57,7 +57,7 @@ let call = (initialWidth: int, initialHeight: int): t => {
         setHeight(_ => innerHeight);
       };
 
-      addEventListener(window, "resive", handler);
+      addEventListener(window, "resize", handler);
 
       Some(() => {
         removeEventListener(window, "resize", handler);
