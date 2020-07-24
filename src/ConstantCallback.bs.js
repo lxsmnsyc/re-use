@@ -2,11 +2,11 @@
 
 var Constant$ReUse = require("./Constant.bs.js");
 
-function call(callback) {
-  return Constant$ReUse.call((function (param) {
-                return callback;
-              }));
+function use(callback) {
+  return Constant$ReUse.use(function (param) {
+              return callback;
+            });
 }
 
-exports.call = call;
+exports.use = use;
 /* Constant-ReUse Not a pure module */

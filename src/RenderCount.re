@@ -25,8 +25,8 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = () => {
-  let counter: ref(int) = Mutable.call(0);
+let use = () => {
+  let counter: ref(int) = Mutable.use(0);
 
   counter := counter^ + 1;
   

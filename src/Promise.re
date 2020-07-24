@@ -25,10 +25,10 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = () => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use = () => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call(() => {
+  IsomorphicEffect.use(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -56,10 +56,10 @@ let call = () => {
   });
 };
 
-let call0 = () => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use0 = () => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call0(() => {
+  IsomorphicEffect.use0(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -87,10 +87,10 @@ let call0 = () => {
   });
 };
 
-let call1 = (deps: array('a)) => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use1 = (deps: array('a)) => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call1(() => {
+  IsomorphicEffect.use1(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -118,10 +118,10 @@ let call1 = (deps: array('a)) => {
   }, deps);
 };
 
-let call2 = (deps: ('a, 'b)) => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use2 = (deps: ('a, 'b)) => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call2(() => {
+  IsomorphicEffect.use2(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -149,10 +149,10 @@ let call2 = (deps: ('a, 'b)) => {
   }, deps);
 };
 
-let call3 = (deps: ('a, 'b, 'c)) => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use3 = (deps: ('a, 'b, 'c)) => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call3(() => {
+  IsomorphicEffect.use3(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -204,10 +204,10 @@ external useCallback7
   : ([@bs.uncurry] ('input => 'output), ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => React.callback('input, 'output)
    = "useCallback";
 
-let call4 = (deps: ('a, 'b, 'c, 'd)) => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use4 = (deps: ('a, 'b, 'c, 'd)) => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call4(() => {
+  IsomorphicEffect.use4(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -235,10 +235,10 @@ let call4 = (deps: ('a, 'b, 'c, 'd)) => {
   }, deps);
 };
 
-let call5 = (deps: ('a, 'b, 'c, 'd, 'e)) => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use5 = (deps: ('a, 'b, 'c, 'd, 'e)) => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call5(() => {
+  IsomorphicEffect.use5(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -266,10 +266,10 @@ let call5 = (deps: ('a, 'b, 'c, 'd, 'e)) => {
   }, deps);
 };
 
-let call6 = (deps: ('a, 'b, 'c, 'd, 'e, 'f)) => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use6 = (deps: ('a, 'b, 'c, 'd, 'e, 'f)) => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call6(() => {
+  IsomorphicEffect.use6(() => {
     mounted := true;
     Some(() => {
       mounted := false;
@@ -297,10 +297,10 @@ let call6 = (deps: ('a, 'b, 'c, 'd, 'e, 'f)) => {
   }, deps);
 };
 
-let call7 = (deps: ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => {
-  let mounted: ref(bool) = Mutable.call(false);
+let use7 = (deps: ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => {
+  let mounted: ref(bool) = Mutable.use(false);
 
-  IsomorphicEffect.call7(() => {
+  IsomorphicEffect.use7(() => {
     mounted := true;
     Some(() => {
       mounted := false;

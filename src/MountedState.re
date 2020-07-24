@@ -25,8 +25,8 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = () => {
-  let mounted: ref(bool) = RefMounted.call();
+let use = () => {
+  let mounted: ref(bool) = RefMounted.use();
 
-  ConstantCallback.call(() => mounted^);
+  ConstantCallback.use(() => mounted^);
 }

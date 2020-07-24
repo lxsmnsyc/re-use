@@ -25,4 +25,4 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call: (unit => option(unit => unit)) => 'a => unit;
+let use: (unit => option(unit => unit)) => 'a => unit;

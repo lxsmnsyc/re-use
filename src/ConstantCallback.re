@@ -25,6 +25,6 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (callback: 'input => 'output): ('input => 'output) => {
-  Constant.call(() => callback);
+let use = (callback: 'input => 'output): ('input => 'output) => {
+  Constant.use(() => callback);
 }

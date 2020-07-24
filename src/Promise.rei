@@ -26,12 +26,12 @@
  * @copyright Alexis Munsayac 2019
  */
 
-let call: unit => (Js.Promise.t('r) => Js.Promise.t('r));
-let call0: unit => (Js.Promise.t('r) => Js.Promise.t('r));
-let call1: array('a) => (Js.Promise.t('r) => Js.Promise.t('r));
-let call2: (('a, 'b)) => (Js.Promise.t('r) => Js.Promise.t('r));
-let call3: (('a, 'b, 'c)) => (Js.Promise.t('r) => Js.Promise.t('r));
-let call4: (('a, 'b, 'c, 'd)) => (Js.Promise.t('r) => Js.Promise.t('r));
-let call5: (('a, 'b, 'c, 'd, 'e)) => (Js.Promise.t('r) => Js.Promise.t('r));
-let call6: (('a, 'b, 'c, 'd, 'e, 'f)) => (Js.Promise.t('r) => Js.Promise.t('r));
-let call7: (('a, 'b, 'c, 'd, 'e, 'f, 'g)) => (Js.Promise.t('r) => Js.Promise.t('r));
+let use: unit => (Js.Promise.t('r) => Js.Promise.t('r));
+let use0: unit => (Js.Promise.t('r) => Js.Promise.t('r));
+let use1: array('a) => (Js.Promise.t('r) => Js.Promise.t('r));
+let use2: (('a, 'b)) => (Js.Promise.t('r) => Js.Promise.t('r));
+let use3: (('a, 'b, 'c)) => (Js.Promise.t('r) => Js.Promise.t('r));
+let use4: (('a, 'b, 'c, 'd)) => (Js.Promise.t('r) => Js.Promise.t('r));
+let use5: (('a, 'b, 'c, 'd, 'e)) => (Js.Promise.t('r) => Js.Promise.t('r));
+let use6: (('a, 'b, 'c, 'd, 'e, 'f)) => (Js.Promise.t('r) => Js.Promise.t('r));
+let use7: (('a, 'b, 'c, 'd, 'e, 'f, 'g)) => (Js.Promise.t('r) => Js.Promise.t('r));

@@ -25,8 +25,8 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (effect: (unit => option(unit => unit))) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use = (effect: (unit => option(unit => unit))) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo(() => {
     switch (cleanup^) {
@@ -38,8 +38,8 @@ let call = (effect: (unit => option(unit => unit))) => {
   });
 };
 
-let call0 = (effect: (unit => option(unit => unit))) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use0 = (effect: (unit => option(unit => unit))) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo0(() => {
     switch (cleanup^) {
@@ -51,8 +51,8 @@ let call0 = (effect: (unit => option(unit => unit))) => {
   });
 };
 
-let call1 = (effect: (unit => option(unit => unit)), deps: array('a)) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use1 = (effect: (unit => option(unit => unit)), deps: array('a)) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo1(() => {
     switch (cleanup^) {
@@ -64,8 +64,8 @@ let call1 = (effect: (unit => option(unit => unit)), deps: array('a)) => {
   }, deps);
 };
 
-let call2 = (effect: (unit => option(unit => unit)), deps: ('a, 'b)) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use2 = (effect: (unit => option(unit => unit)), deps: ('a, 'b)) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo2(() => {
     switch (cleanup^) {
@@ -77,8 +77,8 @@ let call2 = (effect: (unit => option(unit => unit)), deps: ('a, 'b)) => {
   }, deps);
 };
 
-let call3 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c)) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use3 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c)) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo3(() => {
     switch (cleanup^) {
@@ -90,8 +90,8 @@ let call3 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c)) => {
   }, deps);
 };
 
-let call4 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd)) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use4 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd)) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo4(() => {
     switch (cleanup^) {
@@ -103,8 +103,8 @@ let call4 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd)) => 
   }, deps);
 };
 
-let call5 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e)) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use5 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e)) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo5(() => {
     switch (cleanup^) {
@@ -116,8 +116,8 @@ let call5 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e))
   }, deps);
 };
 
-let call6 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e, 'f)) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use6 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e, 'f)) => {
+  let cleanup = MutableCleanup.use();
 
   React.useMemo6(() => {
     switch (cleanup^) {
@@ -134,8 +134,8 @@ let call6 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e, 
   : ([@bs.uncurry] (unit => 'h), ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => unit
    = "useMemo";
 
-let call7 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
+let use7 = (effect: (unit => option(unit => unit)), deps: ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => {
+  let cleanup = MutableCleanup.use();
 
   useMemo7(() => {
     switch (cleanup^) {

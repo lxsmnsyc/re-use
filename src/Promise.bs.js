@@ -4,256 +4,256 @@ var React = require("react");
 var Mutable$ReUse = require("./Mutable.bs.js");
 var IsomorphicEffect$ReUse = require("./IsomorphicEffect.bs.js");
 
-function call(param) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call((function (param) {
-          mounted.contents = true;
-          return (function (param) {
-                    mounted.contents = false;
-                    return /* () */0;
-                  });
-        }));
-  return React.useCallback((function (promise) {
-                return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
-                                      if (mounted.contents) {
-                                        reject(error);
-                                      }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
-                            }));
-              }));
+function use(param) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use(function (param) {
+        mounted.contents = true;
+        return (function (param) {
+                  mounted.contents = false;
+                  
+                });
+      });
+  return React.useCallback(function (promise) {
+              return new Promise((function (resolve, reject) {
+                            promise.then(function (value) {
+                                    if (mounted.contents) {
+                                      resolve(value);
+                                    }
+                                    return Promise.resolve(value);
+                                  }).catch(function (error) {
+                                  if (mounted.contents) {
+                                    reject(error);
+                                  }
+                                  return Promise.reject(error);
+                                });
+                            
+                          }));
+            });
 }
 
-function call0(param) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call0((function (param) {
-          mounted.contents = true;
-          return (function (param) {
-                    mounted.contents = false;
-                    return /* () */0;
-                  });
-        }));
+function use0(param) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use0(function (param) {
+        mounted.contents = true;
+        return (function (param) {
+                  mounted.contents = false;
+                  
+                });
+      });
   return React.useCallback((function (promise) {
                 return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
+                              promise.then(function (value) {
                                       if (mounted.contents) {
-                                        reject(error);
+                                        resolve(value);
                                       }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
                             }));
-              }), ([]));
+              }), []);
 }
 
-function call1(deps) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call1((function (param) {
+function use1(deps) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use1((function (param) {
           mounted.contents = true;
           return (function (param) {
                     mounted.contents = false;
-                    return /* () */0;
-                  });
-        }), deps);
-  return React.useCallback((function (promise) {
-                return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
-                                      if (mounted.contents) {
-                                        reject(error);
-                                      }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
-                            }));
-              }), deps);
-}
-
-function call2(deps) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call2((function (param) {
-          mounted.contents = true;
-          return (function (param) {
-                    mounted.contents = false;
-                    return /* () */0;
+                    
                   });
         }), deps);
   return React.useCallback((function (promise) {
                 return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
+                              promise.then(function (value) {
                                       if (mounted.contents) {
-                                        reject(error);
+                                        resolve(value);
                                       }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
                             }));
               }), deps);
 }
 
-function call3(deps) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call3((function (param) {
+function use2(deps) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use2((function (param) {
           mounted.contents = true;
           return (function (param) {
                     mounted.contents = false;
-                    return /* () */0;
+                    
                   });
         }), deps);
   return React.useCallback((function (promise) {
                 return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
+                              promise.then(function (value) {
                                       if (mounted.contents) {
-                                        reject(error);
+                                        resolve(value);
                                       }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
                             }));
               }), deps);
 }
 
-function call4(deps) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call4((function (param) {
+function use3(deps) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use3((function (param) {
           mounted.contents = true;
           return (function (param) {
                     mounted.contents = false;
-                    return /* () */0;
+                    
                   });
         }), deps);
   return React.useCallback((function (promise) {
                 return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
+                              promise.then(function (value) {
                                       if (mounted.contents) {
-                                        reject(error);
+                                        resolve(value);
                                       }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
                             }));
               }), deps);
 }
 
-function call5(deps) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call5((function (param) {
+function use4(deps) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use4((function (param) {
           mounted.contents = true;
           return (function (param) {
                     mounted.contents = false;
-                    return /* () */0;
+                    
                   });
         }), deps);
   return React.useCallback((function (promise) {
                 return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
+                              promise.then(function (value) {
                                       if (mounted.contents) {
-                                        reject(error);
+                                        resolve(value);
                                       }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
                             }));
               }), deps);
 }
 
-function call6(deps) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call6((function (param) {
+function use5(deps) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use5((function (param) {
           mounted.contents = true;
           return (function (param) {
                     mounted.contents = false;
-                    return /* () */0;
+                    
                   });
         }), deps);
   return React.useCallback((function (promise) {
                 return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
+                              promise.then(function (value) {
                                       if (mounted.contents) {
-                                        reject(error);
+                                        resolve(value);
                                       }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
                             }));
               }), deps);
 }
 
-function call7(deps) {
-  var mounted = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call7((function (param) {
+function use6(deps) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use6((function (param) {
           mounted.contents = true;
           return (function (param) {
                     mounted.contents = false;
-                    return /* () */0;
+                    
                   });
         }), deps);
   return React.useCallback((function (promise) {
                 return new Promise((function (resolve, reject) {
-                              promise.then((function (value) {
-                                        if (mounted.contents) {
-                                          resolve(value);
-                                        }
-                                        return Promise.resolve(value);
-                                      })).catch((function (error) {
+                              promise.then(function (value) {
                                       if (mounted.contents) {
-                                        reject(error);
+                                        resolve(value);
                                       }
-                                      return Promise.reject(error);
-                                    }));
-                              return /* () */0;
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
                             }));
               }), deps);
 }
 
-exports.call = call;
-exports.call0 = call0;
-exports.call1 = call1;
-exports.call2 = call2;
-exports.call3 = call3;
-exports.call4 = call4;
-exports.call5 = call5;
-exports.call6 = call6;
-exports.call7 = call7;
+function use7(deps) {
+  var mounted = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use7((function (param) {
+          mounted.contents = true;
+          return (function (param) {
+                    mounted.contents = false;
+                    
+                  });
+        }), deps);
+  return React.useCallback((function (promise) {
+                return new Promise((function (resolve, reject) {
+                              promise.then(function (value) {
+                                      if (mounted.contents) {
+                                        resolve(value);
+                                      }
+                                      return Promise.resolve(value);
+                                    }).catch(function (error) {
+                                    if (mounted.contents) {
+                                      reject(error);
+                                    }
+                                    return Promise.reject(error);
+                                  });
+                              
+                            }));
+              }), deps);
+}
+
+exports.use = use;
+exports.use0 = use0;
+exports.use1 = use1;
+exports.use2 = use2;
+exports.use3 = use3;
+exports.use4 = use4;
+exports.use5 = use5;
+exports.use6 = use6;
+exports.use7 = use7;
 /* react Not a pure module */

@@ -25,12 +25,12 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (effect: unit => option(unit => unit), dependency: 'a) => {
-  let initial = Mutable.call(true);
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
-  let deps = Mutable.call(dependency);
+let use = (effect: unit => option(unit => unit), dependency: 'a) => {
+  let initial = Mutable.use(true);
+  let cleanup = MutableCleanup.use();
+  let deps = Mutable.use(dependency);
 
-  IsomorphicEffect.call(() => {
+  IsomorphicEffect.use(() => {
     if (initial^ || deps^ != dependency) {
       initial := false;
 

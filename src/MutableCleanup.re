@@ -25,35 +25,15 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-'use strict';
+let use = () => {
+  let cleanup: ref(option(unit => unit)) = Mutable.use(None);
 
-var Caml_obj = require("bs-platform/lib/js/caml_obj.js");
-var React = require("react");
-var useConstant = require("./useConstant.js");
-
-function useNativeState(supplier) {
-  var result = React.useRef();
-  var initial = React.useRef(true);
-  var forceUpdateTuple = React.useState({});
-
-  var dispatch = useConstant(function () {
-    return function (supplier) {
-      var proposed = supplier(result.current);
-
-      if (Caml_obj.caml_notequal(result.current, proposed)) {
-        result.current = proposed;
-        forceUpdateTuple[1]({});
-      }
+  OnUnmount.use(() => {
+    switch (cleanup^) {
+      | Some(fn) => fn();
+      | None => ();
     }
   });
-  
-  if (initial.current) {
-    initial.current = false;
-    result.current = supplier();
-  }
 
-  return [result.current, dispatch];
+  cleanup;
 }
-
-
-module.exports = useNativeState;

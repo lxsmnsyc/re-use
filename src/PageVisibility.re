@@ -39,14 +39,14 @@ type document;
 [@bs.send] external addEventListener: (document, string, unit => unit) => unit = "addEventListener";
 [@bs.send] external removeEventListener: (document, string, unit => unit) => unit = "removeEventListener";
 
-let call = () => {
+let use = () => {
   let (state, setState) = React.useState(() => visibilityState == "visible");
 
-  let callback = ConstantCallback.call(() => {
+  let callback = ConstantCallback.use(() => {
     setState(_ => visibilityState == "visibile");
   })
 
-  IsomorphicEffect.call0(() => {
+  IsomorphicEffect.use0(() => {
     addEventListener(document, "visibilitychange", callback);
 
     Some(() => {

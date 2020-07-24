@@ -25,4 +25,4 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call: ('input => 'output) => 'a => ('input => 'output);
+let use: ('input => 'output) => 'a => ('input => 'output);

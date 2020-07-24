@@ -3,17 +3,17 @@
 var Mutable$ReUse = require("./Mutable.bs.js");
 var IsomorphicEffect$ReUse = require("./IsomorphicEffect.bs.js");
 
-function call(param) {
-  var ref = Mutable$ReUse.call(false);
-  IsomorphicEffect$ReUse.call0((function (param) {
-          ref.contents = true;
-          return (function (param) {
-                    ref.contents = false;
-                    return /* () */0;
-                  });
-        }));
+function use(param) {
+  var ref = Mutable$ReUse.use(false);
+  IsomorphicEffect$ReUse.use0(function (param) {
+        ref.contents = true;
+        return (function (param) {
+                  ref.contents = false;
+                  
+                });
+      });
   return ref;
 }
 
-exports.call = call;
+exports.use = use;
 /* Mutable-ReUse Not a pure module */

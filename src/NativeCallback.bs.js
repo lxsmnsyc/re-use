@@ -2,11 +2,11 @@
 
 var NativeMemo$ReUse = require("./NativeMemo.bs.js");
 
-function call(callback, deps) {
-  return NativeMemo$ReUse.call((function (param) {
+function use(callback, deps) {
+  return NativeMemo$ReUse.use((function (param) {
                 return callback;
               }), deps);
 }
 
-exports.call = call;
+exports.use = use;
 /* NativeMemo-ReUse Not a pure module */

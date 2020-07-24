@@ -25,11 +25,11 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call: (unit => option(unit => unit)) => unit;
-let call1: (unit => option(unit => unit)) => array('a) => unit;
-let call2: ((unit => option(unit => unit)), ('a, 'b)) => unit;
-let call3: ((unit => option(unit => unit)), ('a, 'b, 'c)) => unit;
-let call4: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd)) => unit;
-let call5: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e)) => unit;
-let call6: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e, 'f)) => unit;
-let call7: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => unit;
+let use: (unit => option(unit => unit)) => unit;
+let use1: (unit => option(unit => unit)) => array('a) => unit;
+let use2: ((unit => option(unit => unit)), ('a, 'b)) => unit;
+let use3: ((unit => option(unit => unit)), ('a, 'b, 'c)) => unit;
+let use4: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd)) => unit;
+let use5: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e)) => unit;
+let use6: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e, 'f)) => unit;
+let use7: ((unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => unit;

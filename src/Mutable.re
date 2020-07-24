@@ -25,7 +25,7 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (initial: 'a): ref('a) => {
+let use = (initial: 'a): ref('a) => {
   let ref: React.Ref.t(ref('a)) = React.useRef(ref(initial));
 
   React.Ref.current(ref);

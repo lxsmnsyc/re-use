@@ -3,7 +3,6 @@
   "description": "A collection of hooks for ReasonReact",
   "version": "0.5.0",
   "scripts": {
-    "prepare": "install-peers",
     "build": "bsb -make-world",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
@@ -19,9 +18,11 @@
   "author": "lxsmnsyc",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^7.0.1",
-    "install-peers-cli": "^2.1.1",
-    "moduleserve": "^0.8.4"
+    "bs-platform": "^8.0.3",
+    "moduleserve": "^0.9.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reason-react": "^0.9.1"
   },
   "repository": {
     "type": "git",

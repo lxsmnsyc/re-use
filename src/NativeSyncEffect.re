@@ -25,10 +25,10 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (effect: (unit => option(unit => unit)), dependency: 'a) => {
-  let cleanup: ref(option(unit => unit)) = Mutable.call(None);
-  let initial: ref(bool) = Mutable.call(true);
-  let deps: ref('a) = Mutable.call(dependency);
+let use = (effect: (unit => option(unit => unit)), dependency: 'a) => {
+  let initial: ref(bool) = Mutable.use(true);
+  let deps: ref('a) = Mutable.use(dependency);
+  let cleanup = MutableCleanup.use();
 
   if (initial^ || deps^ != dependency) {
     initial := false;
@@ -37,8 +37,8 @@ let call = (effect: (unit => option(unit => unit)), dependency: 'a) => {
       | Some(fn) => fn();
       | None => ();
     }
-    cleanup := effect();
 
+    cleanup := effect();
     deps := dependency;
   }
 };

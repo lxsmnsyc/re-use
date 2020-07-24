@@ -25,8 +25,8 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (effect: unit => unit) => {
-  IsomorphicEffect.call0(() => {
+let use = (effect: unit => unit) => {
+  IsomorphicEffect.use0(() => {
     Some(effect);
   });
 }

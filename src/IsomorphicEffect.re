@@ -25,30 +25,30 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-[@bs.module] external call
+[@bs.module] external use
   : ([@bs.uncurry] (unit => option(unit => unit))) => unit
   = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call0
+[@bs.module] external use0
   : ([@bs.uncurry] (unit => option(unit => unit)), [@bs.as {json|[]|json}] _) => unit
   = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call1
+[@bs.module] external use1
   : ([@bs.uncurry] (unit => option(unit => unit))) => array('a) => unit
   = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call2
+[@bs.module] external use2
   : ([@bs.uncurry] (unit => option(unit => unit)), ('a, 'b)) => unit
    = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call3
+[@bs.module] external use3
   : ([@bs.uncurry] (unit => option(unit => unit)), ('a, 'b, 'c)) => unit
    = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call4
+[@bs.module] external use4
   : ([@bs.uncurry] (unit => option(unit => unit)), ('a, 'b, 'c, 'd)) => unit
    = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call5
+[@bs.module] external use5
   : ([@bs.uncurry] (unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e)) => unit
    = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call6
+[@bs.module] external use6
   : ([@bs.uncurry] (unit => option(unit => unit)),  ('a, 'b, 'c, 'd, 'e, 'f)) => unit
    = "./bindings/useIsomorphicEffect.js";
-[@bs.module] external call7
+[@bs.module] external use7
   : ([@bs.uncurry] (unit => option(unit => unit)), ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => unit
    = "./bindings/useIsomorphicEffect.js";

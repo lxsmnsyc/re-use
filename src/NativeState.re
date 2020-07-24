@@ -25,6 +25,19 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-[@bs.module] external call
-  : ([@bs.uncurry] (unit => 'a)) => ('a, ('a => 'a) => unit)
-  = "./bindings/useNativeState.js";
+let use = (initialState: unit => 'a): ('a, ('a => 'a) => unit) => {
+  let (state, setState) = React.useState(initialState);
+
+  let dispatch = ConstantCallback.use((action: 'a => 'a) => {
+    setState((prevState) => {
+      let newState = action(prevState);
+      if (prevState != newState) {
+        newState;
+      } else {
+        prevState;
+      }
+    });
+  });
+
+  (state, dispatch);
+};

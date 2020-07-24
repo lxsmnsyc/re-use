@@ -25,10 +25,10 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (state: 'a): option('a) => {
-  let ref = Mutable.call(None);
+let use = (state: 'a): option('a) => {
+  let ref = Mutable.use(None);
 
-  React.useEffect1(() => {
+  IsomorphicEffect.use1(() => {
     ref := Some(state);
 
     None;

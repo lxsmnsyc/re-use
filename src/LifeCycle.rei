@@ -27,4 +27,4 @@
  */
 type t;
 
-let call: t => unit;
+let use: t => unit;

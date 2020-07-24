@@ -25,10 +25,10 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = () => {
-  let ref = Mutable.call(false);
+let use = () => {
+  let ref = Mutable.use(false);
 
-  IsomorphicEffect.call0(() => {
+  IsomorphicEffect.use0(() => {
     ref := true;
 
     Some(() => {

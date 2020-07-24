@@ -25,4 +25,4 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call: ('state => 'action => 'state) => int => 'state => ('state, 'action => unit);
+let use: ('state => 'action => 'state) => int => 'state => ('state, 'action => unit);

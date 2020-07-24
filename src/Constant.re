@@ -25,4 +25,15 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-[@bs.module] external call: (unit => 'a) => 'a = "./bindings/useConstant.js";
+let use = (supplier: unit => 'a): 'a => {
+  let ref: ref(option('a)) = Mutable.use(None);
+
+  switch (ref^) {
+    | Some(value) => value;
+    | None => {
+      let value = supplier();
+      ref := Some(value);
+      value;
+    }
+  }
+};

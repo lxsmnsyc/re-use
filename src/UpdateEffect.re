@@ -25,10 +25,10 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (effect: unit => option(unit => unit)) => {
-  let ref = Mutable.call(true);
+let use = (effect: unit => option(unit => unit)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call(() => {
+  IsomorphicEffect.use(() => {
     if (ref^) {
       ref := true;
 
@@ -39,10 +39,10 @@ let call = (effect: unit => option(unit => unit)) => {
   });
 };
 
-let call1 = (effect: unit => option(unit => unit), dependencies: array('a)) => {
-  let ref = Mutable.call(true);
+let use1 = (effect: unit => option(unit => unit), dependencies: array('a)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call1(() => {
+  IsomorphicEffect.use1(() => {
     if (ref^) {
       ref := true;
 
@@ -53,10 +53,10 @@ let call1 = (effect: unit => option(unit => unit), dependencies: array('a)) => {
   }, dependencies);
 };
 
-let call2 = (effect: unit => option(unit => unit), dependencies: ('a, 'b)) => {
-  let ref = Mutable.call(true);
+let use2 = (effect: unit => option(unit => unit), dependencies: ('a, 'b)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call2(() => {
+  IsomorphicEffect.use2(() => {
     if (ref^) {
       ref := true;
 
@@ -67,10 +67,10 @@ let call2 = (effect: unit => option(unit => unit), dependencies: ('a, 'b)) => {
   }, dependencies);
 };
 
-let call3 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c)) => {
-  let ref = Mutable.call(true);
+let use3 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call3(() => {
+  IsomorphicEffect.use3(() => {
     if (ref^) {
       ref := true;
 
@@ -81,10 +81,10 @@ let call3 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c)) =
   }, dependencies);
 };
 
-let call4 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd)) => {
-  let ref = Mutable.call(true);
+let use4 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call4(() => {
+  IsomorphicEffect.use4(() => {
     if (ref^) {
       ref := true;
 
@@ -95,10 +95,10 @@ let call4 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd
   }, dependencies);
 };
 
-let call5 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd, 'e)) => {
-  let ref = Mutable.call(true);
+let use5 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd, 'e)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call5(() => {
+  IsomorphicEffect.use5(() => {
     if (ref^) {
       ref := true;
 
@@ -109,10 +109,10 @@ let call5 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd
   }, dependencies);
 };
 
-let call6 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd, 'e, 'f)) => {
-  let ref = Mutable.call(true);
+let use6 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd, 'e, 'f)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call6(() => {
+  IsomorphicEffect.use6(() => {
     if (ref^) {
       ref := true;
 
@@ -123,10 +123,10 @@ let call6 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd
   }, dependencies);
 };
 
-let call7 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => {
-  let ref = Mutable.call(true);
+let use7 = (effect: unit => option(unit => unit), dependencies: ('a, 'b, 'c, 'd, 'e, 'f, 'g)) => {
+  let ref = Mutable.use(true);
 
-  IsomorphicEffect.call7(() => {
+  IsomorphicEffect.use7(() => {
     if (ref^) {
       ref := true;
 

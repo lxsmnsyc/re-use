@@ -25,6 +25,6 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call = (callback: 'input => 'output, deps: 'a): ('input => 'output) => {
-  NativeMemo.call(() => callback, deps);
+let use = (callback: 'input => 'output, deps: 'a): ('input => 'output) => {
+  NativeMemo.use(() => callback, deps);
 }

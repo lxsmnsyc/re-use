@@ -27,4 +27,4 @@
  */
 type t;
 
-let call: int => int => t;
+let use: int => int => t;

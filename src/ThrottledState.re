@@ -30,12 +30,12 @@ type timeout;
 [@bs.val] external setTimeout: (unit => unit) => int => timeout = "setTimeout";
 [@bs.val] external clearTimeout: timeout => unit = "clearTimeout";
 
-let call = (timeout: int, initialState: unit => 'a): ('a, ('a => 'a) => unit) => {
+let use = (timeout: int, initialState: unit => 'a): ('a, ('a => 'a) => unit) => {
   let (state, setState) = React.useState(initialState);
 
-  let ref: ref(option(timeout)) = Mutable.call(None);
+  let ref: ref(option(timeout)) = Mutable.use(None);
 
-  OnUnmount.call(() => {
+  OnUnmount.use(() => {
     switch (ref^) {
       | Some(value) => clearTimeout(value);
       | None => ();

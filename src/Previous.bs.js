@@ -1,17 +1,17 @@
 'use strict';
 
-var React = require("react");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var Mutable$ReUse = require("./Mutable.bs.js");
+var IsomorphicEffect$ReUse = require("./IsomorphicEffect.bs.js");
 
-function call(state) {
-  var ref = Mutable$ReUse.call(undefined);
-  React.useEffect((function () {
+function use(state) {
+  var ref = Mutable$ReUse.use(undefined);
+  IsomorphicEffect$ReUse.use1((function (param) {
           ref.contents = Caml_option.some(state);
-          return ;
-        }), /* array */[state]);
+          
+        }), [state]);
   return ref.contents;
 }
 
-exports.call = call;
-/* react Not a pure module */
+exports.use = use;
+/* Mutable-ReUse Not a pure module */

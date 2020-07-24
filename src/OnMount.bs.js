@@ -3,12 +3,12 @@
 var Curry = require("bs-platform/lib/js/curry.js");
 var IsomorphicEffect$ReUse = require("./IsomorphicEffect.bs.js");
 
-function call(effect) {
-  return IsomorphicEffect$ReUse.call0((function (param) {
-                Curry._1(effect, /* () */0);
-                return ;
-              }));
+function use(effect) {
+  return IsomorphicEffect$ReUse.use0(function (param) {
+              Curry._1(effect, undefined);
+              
+            });
 }
 
-exports.call = call;
+exports.use = use;
 /* IsomorphicEffect-ReUse Not a pure module */

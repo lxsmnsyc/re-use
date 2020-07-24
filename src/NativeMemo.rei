@@ -25,4 +25,4 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-let call: (unit => 'a) => 'b => 'a;
+let use: (unit => 'a) => 'b => 'a;

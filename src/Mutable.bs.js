@@ -2,11 +2,11 @@
 
 var React = require("react");
 
-function call(initial) {
+function use(initial) {
   return React.useRef({
               contents: initial
             }).current;
 }
 
-exports.call = call;
+exports.use = use;
 /* react Not a pure module */

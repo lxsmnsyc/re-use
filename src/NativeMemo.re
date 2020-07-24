@@ -25,6 +25,21 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-[@bs.module] external call
-  : ([@bs.uncurry] (unit => 'a)) => 'b => 'a
-  = "./bindings/useNativeMemo.js";
+let use = (supplier: unit => 'a, dependency: 'b) => {
+  let deps: ref('b) = Mutable.use(dependency);
+  let result = Mutable.use(None)
+
+  if (deps^ != dependency) {
+    result := Some(supplier());
+    deps := dependency;
+  }
+
+  switch (result^) {
+    | Some(value) => value;
+    | None => {
+      let value = supplier();
+      result := Some(value);
+      value;
+    };
+  }
+};

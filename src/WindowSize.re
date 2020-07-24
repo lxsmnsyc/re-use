@@ -45,12 +45,12 @@ type t = {
   height: int,
 };
 
-let call = (initialWidth: int, initialHeight: int): t => {
+let use = (initialWidth: int, initialHeight: int): t => {
   let isClient = Js.typeof(window) == "undefined";
   let (width, setWidth) = React.useState(() => isClient ? initialWidth : innerWidth);
   let (height, setHeight) = React.useState(() => isClient ? initialHeight : innerHeight);
 
-  IsomorphicEffect.call1(() => {
+  IsomorphicEffect.use1(() => {
     if (isClient) {
       let handler = () => {
         setWidth(_ => innerWidth);

@@ -2,124 +2,124 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var Mutable$ReUse = require("./Mutable.bs.js");
+var MutableCleanup$ReUse = require("./MutableCleanup.bs.js");
 
-function call(effect) {
-  var cleanup = Mutable$ReUse.call(undefined);
-  return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
-                }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
-              }));
+function use(effect) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
+  return React.useMemo(function () {
+              var fn = cleanup.contents;
+              if (fn !== undefined) {
+                Curry._1(fn, undefined);
+              }
+              cleanup.contents = Curry._1(effect, undefined);
+              
+            });
 }
 
-function call0(effect) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use0(effect) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
+                var fn = cleanup.contents;
+                if (fn !== undefined) {
+                  Curry._1(fn, undefined);
                 }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
-              }), ([]));
+                cleanup.contents = Curry._1(effect, undefined);
+                
+              }), []);
 }
 
-function call1(effect, deps) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use1(effect, deps) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
+                var fn = cleanup.contents;
+                if (fn !== undefined) {
+                  Curry._1(fn, undefined);
                 }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
+                cleanup.contents = Curry._1(effect, undefined);
+                
               }), deps);
 }
 
-function call2(effect, deps) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use2(effect, deps) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
+                var fn = cleanup.contents;
+                if (fn !== undefined) {
+                  Curry._1(fn, undefined);
                 }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
+                cleanup.contents = Curry._1(effect, undefined);
+                
               }), deps);
 }
 
-function call3(effect, deps) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use3(effect, deps) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
+                var fn = cleanup.contents;
+                if (fn !== undefined) {
+                  Curry._1(fn, undefined);
                 }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
+                cleanup.contents = Curry._1(effect, undefined);
+                
               }), deps);
 }
 
-function call4(effect, deps) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use4(effect, deps) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
+                var fn = cleanup.contents;
+                if (fn !== undefined) {
+                  Curry._1(fn, undefined);
                 }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
+                cleanup.contents = Curry._1(effect, undefined);
+                
               }), deps);
 }
 
-function call5(effect, deps) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use5(effect, deps) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
+                var fn = cleanup.contents;
+                if (fn !== undefined) {
+                  Curry._1(fn, undefined);
                 }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
+                cleanup.contents = Curry._1(effect, undefined);
+                
               }), deps);
 }
 
-function call6(effect, deps) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use6(effect, deps) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   return React.useMemo((function () {
-                var match = cleanup.contents;
-                if (match !== undefined) {
-                  Curry._1(match, /* () */0);
+                var fn = cleanup.contents;
+                if (fn !== undefined) {
+                  Curry._1(fn, undefined);
                 }
-                cleanup.contents = Curry._1(effect, /* () */0);
-                return /* () */0;
+                cleanup.contents = Curry._1(effect, undefined);
+                
               }), deps);
 }
 
-function call7(effect, deps) {
-  var cleanup = Mutable$ReUse.call(undefined);
+function use7(effect, deps) {
+  var cleanup = MutableCleanup$ReUse.use(undefined);
   React.useMemo((function () {
-          var match = cleanup.contents;
-          if (match !== undefined) {
-            Curry._1(match, /* () */0);
+          var fn = cleanup.contents;
+          if (fn !== undefined) {
+            Curry._1(fn, undefined);
           }
-          cleanup.contents = Curry._1(effect, /* () */0);
-          return /* () */0;
+          cleanup.contents = Curry._1(effect, undefined);
+          
         }), deps);
-  return /* () */0;
+  
 }
 
-exports.call = call;
-exports.call0 = call0;
-exports.call1 = call1;
-exports.call2 = call2;
-exports.call3 = call3;
-exports.call4 = call4;
-exports.call5 = call5;
-exports.call6 = call6;
-exports.call7 = call7;
+exports.use = use;
+exports.use0 = use0;
+exports.use1 = use1;
+exports.use2 = use2;
+exports.use3 = use3;
+exports.use4 = use4;
+exports.use5 = use5;
+exports.use6 = use6;
+exports.use7 = use7;
 /* react Not a pure module */

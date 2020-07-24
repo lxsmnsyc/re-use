@@ -2,11 +2,11 @@
 
 var IsomorphicEffect$ReUse = require("./IsomorphicEffect.bs.js");
 
-function call(effect) {
-  return IsomorphicEffect$ReUse.call0((function (param) {
-                return effect;
-              }));
+function use(effect) {
+  return IsomorphicEffect$ReUse.use0(function (param) {
+              return effect;
+            });
 }
 
-exports.call = call;
+exports.use = use;
 /* IsomorphicEffect-ReUse Not a pure module */

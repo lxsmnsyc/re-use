@@ -30,8 +30,8 @@ type t = {
   onUnmount: unit => unit,
 };
 
-let call = ({ onMount, onUnmount }: t) => {
-  IsomorphicEffect.call0(() => {
+let use = ({ onMount, onUnmount }: t) => {
+  IsomorphicEffect.use0(() => {
     onMount();
     Some(onUnmount);
   });
